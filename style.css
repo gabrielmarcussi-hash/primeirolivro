@@ -20,12 +20,12 @@
 
 /* Cores principais do projeto */
 :root {
-  --cor-principal: #5b21b6;
-  --cor-secundaria: #7c3aed;
+  --cor-principal: #1A1A1B;
+  --cor-secundaria: #0B0D0F;
   --cor-destaque: #facc15;
-  --cor-fundo: #f7f3ff;
+  --cor-fundo: #ecb3a7;
   --cor-texto: #222222;
-  --cor-branca: #ffffff;
+  --cor-branca: #e78181;
 }
 
 /* Configuração geral */
