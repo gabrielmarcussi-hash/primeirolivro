@@ -1,0 +1,242 @@
+/*
+  PROJETO LIVRO
+  Arquivo CSS do site.
+
+  Os alunos podem alterar:
+  - cores
+  - fontes
+  - imagens
+  - tamanhos
+  - textos
+  - cards
+*/
+
+/* Remove margens padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cores principais do projeto */
+:root {
+  --cor-principal: #5b21b6;
+  --cor-secundaria: #7c3aed;
+  --cor-destaque: #facc15;
+  --cor-fundo: #f7f3ff;
+  --cor-texto: #222222;
+  --cor-branca: #ffffff;
+}
+
+/* Configuração geral */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menu */
+.cabecalho nav a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.cabecalho nav a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Banner principal */
+.banner {
+  min-height: 80vh;
+  padding: 50px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  background: linear-gradient(135deg, #ede9fe, #ffffff);
+}
+
+/* Texto do banner */
+.banner-texto {
+  max-width: 520px;
+}
+
+.categoria {
+  color: var(--cor-secundaria);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.banner-texto h2 {
+  font-size: 48px;
+  color: var(--cor-principal);
+  margin-bottom: 10px;
+}
+
+.autor {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Botão */
+.botao {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* Imagem da capa */
+.banner-imagem img {
+  width: 300px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Seções */
+.secao {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 30px;
+}
+
+.secao h2 {
+  font-size: 32px;
+  color: var(--cor-principal);
+  margin-bottom: 20px;
+}
+
+/* Informações rápidas */
+.informacoes {
+  display: flex;
+  gap: 20px;
+}
+
+.info {
+  background-color: var(--cor-branca);
+  padding: 25px;
+  border-left: 6px solid var(--cor-secundaria);
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.info h3 {
+  color: var(--cor-principal);
+  margin-bottom: 10px;
+}
+
+/* Cards dos personagens */
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--cor-branca);
+  padding: 25px;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: var(--cor-principal);
+  margin-bottom: 10px;
+}
+
+/* Seção opinião */
+.opiniao {
+  background-color: var(--cor-branca);
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Nota do livro */
+.nota {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.nota strong {
+  color: var(--cor-destaque);
+  margin-left: 10px;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+  text-align: center;
+  padding: 25px;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cabecalho nav {
+    margin-top: 15px;
+  }
+
+  .cabecalho nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-texto h2 {
+    font-size: 36px;
+  }
+
+  .informacoes,
+  .cards {
+    flex-direction: column;
+  }
+
+  .banner-imagem img {
+    width: 240px;
+    height: 340px;
+  }
+}
